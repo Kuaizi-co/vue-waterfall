@@ -12,6 +12,22 @@
         transition: all .5s cubic-bezier(.55,0,.1,1);
         -webkit-transition: all .5s cubic-bezier(.55,0,.1,1);
       }
+      .item > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .vue-waterfall-slot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .vue-waterfall-slot{
+        padding: 10px!important;
+        border: 1px solid #ddd;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, .15);
+        border-radius: 3px;
+      }
     </style>
   </head>
   <body>
@@ -19,6 +35,8 @@
       <waterfall
         :grow="grow"
         :watch="items"
+        :gap="15"
+        :padding="10"
         @reflowed="reflowed"
         ref="waterfall"
       >
@@ -29,14 +47,17 @@
           :height="item.height"
           :order="index"
           :key="item.index"
+          :gap="10"
           move-class="item-move"
         >
-          <div class="item" :style="item.style" :index="item.index"></div>
+          <div :style="item.style" :index="item.index">
+            <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1345959654,1340768828&fm=80&w=179&h=119&img.JPEG" />
+          </div>
         </waterfall-slot>
       </waterfall>
     </div>
     <script src="https://cdn.jsdelivr.net/vue/2.0.3/vue.min.js"></script>
-    <script src="http://app.moptym.com/cdn/vue-waterfall/vue-waterfall.min.js"></script>
+    <script src="../lib/vue-waterfall.js"></script>
     <script src="./common/js/item-factory.js"></script>
     <script>
 
@@ -47,7 +68,7 @@
               'waterfall-slot': Waterfall.waterfallSlot
             },
             data: {
-              grow: [3, 2, 1, 2],
+              grow: [1,1,1,1],
               items: ItemFactory.get(100),
               isBusy: false
             },

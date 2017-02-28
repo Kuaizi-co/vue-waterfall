@@ -1,5 +1,5 @@
 {
-  "name": "vue-waterfall",
+  "name": "kz-vue-waterfall",
   "version": "1.0.5",
   "description": "A waterfall layout component for Vue.js",
   "main": "lib/vue-waterfall.min.js",
@@ -8,11 +8,13 @@
   ],
   "scripts": {
     "build": "webpack --config build/webpack.min.conf.js",
+    "dev": "webpack --config build/webpack.base.conf.js --watch",
+    "server": "anywhere",
     "test": "echo '42'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MopTym/vue-waterfall.git"
+    "url": "git+https://github.com/kuaizi-co/vue-waterfall.git"
   },
   "keywords": [
     "waterfall",
