@@ -172,6 +172,21 @@ new Vue({
             <td><code>{}</code></td>
             <td>Watch something, reflow when it changes.</td>
         </tr>
+        <tr>
+            <td>gap</td>
+            <td><code>0</code></td>
+            <td>Set the item's gap,as has margin</td>
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td><code>0</code></td>
+            <td>Set the item's padding</td>
+        </tr>
+        <tr>
+            <td>borderWidth</td>
+            <td><code>0</code></td>
+            <td>Set the item's border-width,must be to set same number</td>
+        </tr>
     </tbody>
 </table>
 
