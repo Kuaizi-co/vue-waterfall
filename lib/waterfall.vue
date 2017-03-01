@@ -189,7 +189,7 @@ var verticalLineProcessor = (() => {
       let rect = rects[index]
       rect.top = tops[offset] + gap / 2
       rect.left = strategy.left + (offset ? sum(strategy.width.slice(0, offset)) : 0) + gap / 2
-      rect.width = width - gap
+      rect.width = width - gap - borderWidth * 2
       rect.height = meta.height * (options.fixedHeight ? 1 : (rect.width - padding * 2 - borderWidth * 2) / meta.width) + padding * 2
       tops[offset] = tops[offset] + rect.height + gap
     })
